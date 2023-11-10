@@ -1,3 +1,7 @@
+# -*- coding: utf-8 -*-
+# @Author  : minkou
+# @Time    : 10/02/2023
+
 import numpy as np
 
 def main():
@@ -10,7 +14,7 @@ def main():
     
   n.pop(0)
 
-  print(f"輸入數字:{n}，平均值={round(np.mean(n), 2)}，中位數={round(np.median(n), 2)}，"
+  print(f"平均值={round(np.mean(n), 2)}，中位數={round(np.median(n), 2)}，"
         f"變異數={round(np.var(n), 2)}，標準差{round(np.std(n), 2)}")
 
 if __name__ == "__main__":
