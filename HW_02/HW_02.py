@@ -1,7 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Author  : minkou
-# @Time    : 10/02/2023
-
 import numpy as np
 
 def main():
@@ -18,7 +14,4 @@ def main():
         f"變異數={round(np.var(n), 2)}，標準差{round(np.std(n), 2)}")
 
 if __name__ == "__main__":
-  try:
     main()
-  except:
-    pass

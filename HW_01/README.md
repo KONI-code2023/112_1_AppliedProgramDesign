@@ -11,12 +11,4 @@
 (1, 6, 8, 9)  
 (3, 4, 5, 6)  
 共有 2 組
-<<<<<<< Updated upstream
 ```
-=======
-
-## 目錄結構
-    .
-    ├── HW_01.py                
-    └── README.md
->>>>>>> Stashed changes

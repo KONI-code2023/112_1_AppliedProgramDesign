@@ -1,7 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Author  : minkou
-# @Time    : 09/25/2023
-
 def main():
   max_range = 100
   count = 0
