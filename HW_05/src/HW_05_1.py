@@ -1,7 +1,7 @@
 def main():
     while True:
-        a = int(input("a = "))
-        b = int(input("b = "))
+        a = int(input())
+        b = int(input())
         if a <= b:
             break
 
@@ -11,10 +11,7 @@ def main():
         if i % 4 == 0 or i % 9 == 0:
             output.append(i)
             
-    print(f"輸入：{a}, {b}，輸出：{output}，共有{len(output)}個，總和為{sum(output)}。")
+    print(f"{output}，共有{len(output)}個，總和為{sum(output)}")
 
 if __name__ == '__main__':
-    try:
         main() 
-    except:
-        pass

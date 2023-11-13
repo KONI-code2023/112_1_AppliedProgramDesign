@@ -56,7 +56,4 @@ def main():
     f.closed 
 
 if __name__ == "__main__":
-    try:
         main()
-    except:
-        pass
