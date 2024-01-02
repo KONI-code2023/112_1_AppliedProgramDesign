@@ -60,7 +60,7 @@
 │  ├─ mnist.py
 │  └─ README.md
 │
-├─ Assignment_010
+├─ Assignment_10
 │  ├─ code
 │  │  ├─ A.py
 │  │  ├─ B.py
