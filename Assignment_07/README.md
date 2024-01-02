@@ -5,9 +5,9 @@
 請設計一程式可以對於過亮或過暗的圖片調整使圖片中的物件可以明顯呈現。此程式需可以讀入指定檔案、轉成灰階圖、調整像素值、將計算結果依指定檔名 (Q10_ans.jpg) 另存新檔，如圖(一)、圖(二)，同時顯示調整前後的直方圖於螢幕上，如圖(三)。
 
 
-## 圖(一) Q10.jpg
+### 圖(一) Q10.jpg
 ![!\[Alt text\](Q10.jpg)](image/Q10.jpg)
-## 圖(二) Q10_ans.jpg
+### 圖(二) Q10_ans.jpg
 ![!\[Alt text\](Q10_ans.jpg)](image/Q10_ans.jpg)
-## 圖(三) 直方圖
+### 圖(三) 直方圖
 ![!\[Alt text\](histogram.png)](image/histogram.png)
