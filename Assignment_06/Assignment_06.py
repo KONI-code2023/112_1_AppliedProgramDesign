@@ -1,11 +1,16 @@
+# ======================
+# file: Assignment_06.py
+# author: KNE-code2023@github
+# date: 2023-11-27
+# ======================
 class TrainTickets:
-    def __init__(self):
+    def __init__(self) -> None:
         self.rows = []
-        self.columns = ['A', 'B', 'C', 'D', 'E']
+        self.columns = ["A", "B", "C", "D", "E"]
         self.tickets = []
-        self.initialize_tickets()
+        self.init_tickets()
 
-    def initialize_tickets(self):
+    def init_tickets(self) -> None:
         for i in range(1, 11):
             if i == (20 / 2):
                 self.rows.append(i)
@@ -14,31 +19,36 @@ class TrainTickets:
                 self.rows.append(20 - i)
 
         for row in self.rows:
-            for column in self.columns:
-                if row % 2 == 0 and column in ('B', 'E'):
-                    self.tickets.append(str(row) + column)
-                elif row % 2 != 0 and column in ('A', 'C', 'D'):
-                    self.tickets.append(str(row) + column)
+            for col in self.columns:
+                if row % 2 == 0 and col in ("B", "E"):
+                    self.tickets.append(str(row) + col)
+                elif row % 2 != 0 and col in ("A", "C", "D"):
+                    self.tickets.append(str(row) + col)
 
-    def purchase_tickets(self):
+    def purchase_tickets(self) -> None:
         while self.tickets:
             try:
-                num = int(input("請輸入購買張數 (1-4)："))
+                num = int(input("購買張數 (1-4)："))
                 if 0 < num <= 4:
                     if len(self.tickets) < num:
-                        print(f"剩餘票數不足，目前剩餘{len(self.tickets)}張票")
+                        print(f"剩餘票數不足，目前剩餘 {len(self.tickets)} 張票")
                     else:
+                        print(f"已完成購買")
                         for _ in range(num):
-                            print(self.tickets.pop(0), end=' ')
+                            print(self.tickets.pop(0), end=" ")
                         print()
                 else:
                     print("每人每次限購 1~4 張票")
-            except ValueError as err:
+            except ValueError:
                 print("請輸入正確購買票數")
 
-def main():
-    train_tickets = TrainTickets()
-    train_tickets.purchase_tickets()
+        print("本車廂所有座位已售完")
+
+
+def main() -> None:
+    tt = TrainTickets()
+    tt.purchase_tickets()
+
 
 if __name__ == "__main__":
     main()

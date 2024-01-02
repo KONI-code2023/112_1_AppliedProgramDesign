@@ -1,6 +1,12 @@
+# ======================
+# file: Assignment_02.py
+# author: KNE-code2023@github
+# date: 2023-10-02
+# ======================
 import numpy as np
 
-def get_positive_number():
+
+def get_positive_number() -> None:
     while True:
         try:
             num = float(input("請輸入正整數或正浮點數: "))
@@ -15,7 +21,8 @@ def get_positive_number():
         except ValueError:
             print("請輸入有效數字")
 
-def main():
+
+def main() -> None:
     n = []
 
     while True:
@@ -30,6 +37,7 @@ def main():
 
     print(f"平均值 = {round(np.mean(n), 2)}，中位數 = {round(np.median(n), 2)}，"
           f"變異數 = {round(np.var(n), 2)}，標準差 = {round(np.std(n), 2)}")
+
 
 if __name__ == "__main__":
     main()
