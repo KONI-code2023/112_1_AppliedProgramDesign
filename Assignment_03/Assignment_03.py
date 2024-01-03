@@ -74,7 +74,7 @@ def main() -> None:
     budget = get_input("本月預算：", int, validate_positive_integer)
 
     remaining_usage = calculate_remaining_usage(month, current_usage, budget)
-    print(f"電費 {round(calculate_fee(current_usage, SUMMER_FEES), 2)} 元，尚可用 {remaining_usage} 度")
+    print(f"目前電費 {round(calculate_fee(current_usage, SUMMER_FEES), 2)} 元，尚可用 {remaining_usage} 度")
 
 
 if __name__ == "__main__":

@@ -27,7 +27,7 @@ def show_histogram(input_img: Image, output_img: Image) -> None:
     output_arr = np.array(output_img)
     output_gray = cv2.cvtColor(output_arr, cv2.COLOR_GRAY2RGB)
 
-    plt.figure(dpi=150)
+    plt.figure(figsize=(15, 6))
     plt.hist(input_gray.ravel(), bins=256, color="blue", label="input img")
     plt.hist(output_gray.ravel(), bins=256, color="orange", alpha=0.7, label="output img")
     plt.legend()
@@ -37,10 +37,10 @@ def show_histogram(input_img: Image, output_img: Image) -> None:
 
 if __name__ == "__main__":
     input_folder = "."
-    input_file = "Q10.jpg"
+    input_file = ".\\image\\Q10.jpg"
     input_path = os.path.join(input_folder, input_file)
 
-    output_file = "Q10_ans.jpg"
+    output_file = ".\\image\\Q10_ans.jpg"
     output_path = os.path.join(input_folder, output_file)
 
     adjusted_img = adjust(input_path, output_path)
