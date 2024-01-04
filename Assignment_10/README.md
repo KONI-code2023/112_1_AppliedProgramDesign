@@ -9,18 +9,21 @@ python main.py
 ```
 ## 目錄結構
 ```bash
-Assignment_10.
-├─ code
+Assignment_10/
+│
+├─ code/
 │  ├─ A.py
 │  ├─ B.py
 │  ├─ C.py
 │  ├─ D.py
 │  └─ E.py
 │
-├─ desc.json
+├─ config/
+│  └─ config.json
+│
 ├─ main.py
 └─ README.md
 ```
 * `code` ： 存放 A-E.py
+* `config` ： code 資料夾內的程式描述
 * `main.py` ： 主程式
-* `desc.json` ： code 資料夾內的程式描述
