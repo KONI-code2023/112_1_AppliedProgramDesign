@@ -6,8 +6,21 @@
 
 
 ### 圖1 - Q10.jpg
-![!\[Alt text\](Q10.jpg)](image/Q10.jpg)
+![!\[Alt text\](Q10.jpg)](images/Q10.jpg)
 ### 圖2 - Q10_ans.jpg
-![!\[Alt text\](Q10_ans.jpg)](image/Q10_ans.jpg)
+![!\[Alt text\](Q10_ans.jpg)](images/Q10_ans.jpg)
 ### 圖3 - 直方圖
-![!\[Alt text\](histogram.png)](image/histogram.png)
+![!\[Alt text\](histogram.png)](images/histogram.png)
+
+## 目錄結構
+```bash
+Assignment_07/
+│
+├─ images/
+│  ├─ Q10.jpg
+│  ├─ Q10_ans.jpg
+│  └─ histogram.png
+│
+├─ Assignment_07.py
+└─ README.md
+```

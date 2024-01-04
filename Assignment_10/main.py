@@ -9,9 +9,9 @@ import subprocess
 import platform 
 
 # 存放程式碼的資料夾
-CODE_FOLDER = "./code"
+CODE_FOLDER = ".\\code"
 # 描述檔
-DESC_FILE = "./desc.json"
+DESC_FILE = ".\\config\\config.json"
 
 
 def get_progs() -> dict:

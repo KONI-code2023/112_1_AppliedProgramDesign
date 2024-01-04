@@ -37,10 +37,10 @@ def show_histogram(input_img: Image, output_img: Image) -> None:
 
 if __name__ == "__main__":
     input_folder = "."
-    input_file = ".\\image\\Q10.jpg"
+    input_file = ".\\images\\Q10.jpg"
     input_path = os.path.join(input_folder, input_file)
 
-    output_file = ".\\image\\Q10_ans.jpg"
+    output_file = ".\\images\\Q10_ans.jpg"
     output_path = os.path.join(input_folder, output_file)
 
     adjusted_img = adjust(input_path, output_path)

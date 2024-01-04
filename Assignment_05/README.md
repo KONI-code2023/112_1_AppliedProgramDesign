@@ -52,17 +52,18 @@ python Assignment_05_3.py
 
 ## 目錄結構
 ```bash
-Assignment_05.
-├─ code
+Assignment_05/
+│
+├─ data/
+│  └─ snow-white.txt
+│
+├─ docs/
+│  └─ output.txt
+│
+├─ src/
 │  ├─ Assignment_05_1.py
 │  ├─ Assignment_05_2.py
 │  └─ Assignment_05_3.py
-│
-├─ data
-│  └─ snow-white.txt
-│
-├─ docs
-│  └─ output.txt
 │
 └─ README.md
 ```
