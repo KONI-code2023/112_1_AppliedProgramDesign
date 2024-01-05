@@ -35,6 +35,7 @@ def main() -> None:
         print("未輸入任何數字")
         return
 
+    print(f"輸入的數字列表: {n}")
     print(f"平均值 = {round(np.mean(n), 2)}，中位數 = {round(np.median(n), 2)}，"
           f"變異數 = {round(np.var(n), 2)}，標準差 = {round(np.std(n), 2)}")
 

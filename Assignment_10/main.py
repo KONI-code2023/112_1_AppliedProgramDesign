@@ -6,84 +6,79 @@
 import os
 import json
 import subprocess
-import platform 
 
-# 存放程式碼的資料夾
+
 CODE_FOLDER = ".\\code"
-# 描述檔
 DESC_FILE = ".\\config\\config.json"
 
 
-def get_progs() -> dict:
-    progs = {}
-    for fname in os.listdir(CODE_FOLDER):
-        if fname.endswith(".py"):
-            # 取得檔案名稱（拿掉副檔名並轉成大寫）
-            name = fname.split(".")[0].upper()
-            progs[name] = {"file": os.path.join(CODE_FOLDER, fname),
-                           "desc": "No desc"}
-    return progs
+def get_programs() -> dict:
+    programs = {}
+    for file_name in os.listdir(CODE_FOLDER):
+        if file_name.endswith(".py"):
+            name = os.path.splitext(file_name)[0].upper()
+            programs[name] = {"file": os.path.join(CODE_FOLDER, file_name), "desc": "No desc"}
+    return programs
 
 
-def load_desc() -> dict:
-    descs = {}
+def load_descriptions() -> dict:
+    descriptions = {}
     try:
-        with open(DESC_FILE, "r", encoding="utf-8") as f:
-            # 將 JSON 解析成字典
-            descs = json.load(f)
+        with open(DESC_FILE, "r", encoding="utf-8") as file:
+            descriptions = json.load(file)
     except (FileNotFoundError, json.JSONDecodeError):
         pass
-    return descs
+    return descriptions
 
 
-def update_desc(progs: dict, descs: dict) -> None:
-    for pname, info in progs.items():
-        if pname in descs:
-            info["desc"] = descs[pname]
+def update_descriptions(programs: dict, descriptions: dict) -> None:
+    for program_name, info in programs.items():
+        if program_name in descriptions:
+            info["desc"] = descriptions[program_name]
 
 
 def run(file: str) -> None:
     try:
-        # 使用 subprocess 執行 Python 程式
-        if platform.system() == "Windows":
-            subprocess.run(["python", file], check=True, shell=True)
-        else:
-            subprocess.run(["python", file], check=True)
-        print("done")
-    except subprocess.CalledProcessError:
-        print(f"[Error] unable to run file '{file}'")
+        subprocess.run(["python", file], check=True)
+        print("Done.")
+    except subprocess.CalledProcessError as error:
+        print(f"[Error] Unable to execute file '{file}': {error}")
 
 
-def menu() -> None:
-    # 將程式清單字典照字母順序排序
-    sorted_progs = dict(sorted(PROGRAMS.items()))
+def display_menu(programs: dict, descriptions: dict) -> None:
+    sorted_programs = dict(sorted(programs.items()))
+    #max_title_length = max(len(descriptions[option]["title"]) for option in sorted_programs)
+    print("\n====================================\
+           \nMain Menu\
+           \n====================================")
+    for option, info in sorted_programs.items():
+        title = descriptions.get(option, {}).get("title", "No title")
+        author = descriptions.get(option, {}).get("author", "No author")
 
-    print("\n=========== Main Menu ===========")
-    for opt, info in sorted_progs.items():
-        print(f"{opt}) {info['desc']}")
+        #print(f"{option}) {title}{'  '*(max_title_length - len(title))} [developed by {author}]")
+        print(f"{option}) {title}")
 
-    print("\nZ) Exit")
-    print("=================================")
+    print("\nZ) Exit Menu")
+    print("====================================")
 
 
 def main() -> None:
-    global PROGRAMS
-    PROGRAMS = get_progs()
-    descs = load_desc()
-    update_desc(PROGRAMS, descs)
+    programs = get_programs()
+    descriptions = load_descriptions()
+    update_descriptions(programs, descriptions)
 
     while True:
-        menu()
-        user_in = input("Select from the menu:\n ").upper()
+        display_menu(programs, descriptions)
+        user_input = input("Please enter the letter of the option you desire (A ~ E or Z):\n ").upper()
 
-        if user_in == "Z":
-            print("Exit ")
+        if user_input == "Z":
+            print("Exit Menu ...")
             break
-        elif user_in in PROGRAMS:
-            print(f"Run {user_in}.py ...")
-            run(PROGRAMS[user_in]["file"])
+        elif user_input in programs:
+            print(f"Run {user_input}.py ...")
+            run(programs[user_input]["file"])
         else:
-            print(f"[Error] can't open file '{user_in}.py': No such file or directory")
+            print(f"[Error] Unable to open file '{user_input}.py': File or directory not found")
 
 
 if __name__ == "__main__":
