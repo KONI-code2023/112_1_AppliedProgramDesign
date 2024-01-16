@@ -1,6 +1,6 @@
 # ======================
 # file: Assignment_05_1.py
-# author: KNE-code2023@github
+# author: KONI-code2023@github
 # date: 2023-10-23
 # ======================
 def get_positive_integer_input(prompt: str) -> int:

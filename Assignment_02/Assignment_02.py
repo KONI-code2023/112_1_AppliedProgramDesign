@@ -1,6 +1,6 @@
 # ======================
 # file: Assignment_02.py
-# author: KNE-code2023@github
+# author: KONI-code2023@github
 # date: 2023-10-02
 # ======================
 import numpy as np

@@ -1,6 +1,6 @@
 # ======================
 # file: Assignment_01.py
-# author: KNE-code2023@github
+# author: KONI-code2023@github
 # date: 2023-09-25
 # ======================
 def find_special_numbers(max_range: int) -> list:

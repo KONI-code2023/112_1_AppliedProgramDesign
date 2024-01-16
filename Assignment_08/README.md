@@ -16,7 +16,7 @@
 顯示橫軸是 Destination Port，縱軸是正常流量的 Fwd Packets/s 和其標準差，以及 DDoS 流量的 Fwd Packets/s 和其標準差。 
 ![Alt text](images/image4.png)
 
-※ 4 和 5 的顏色設定依序為: 紅色、綠色、黃色、藍色。
+※ 4 和 5 的顏色設定依序為: 紅色、綠色、黃色、藍色，這兩題我不確定是否正確🤨。
 
 ## 目錄結構
 ```bash

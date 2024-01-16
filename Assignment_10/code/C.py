@@ -1,6 +1,6 @@
 # ======================
 # file: Assignment_03.py
-# author: KNE-code2023@github
+# author: KONI-code2023@github
 # date: 2023-10-09
 # ======================
 # 夏季月份

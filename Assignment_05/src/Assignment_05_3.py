@@ -1,6 +1,6 @@
 # ======================
 # file: Assignment_05_3.py
-# author: KNE-code2023@github
+# author: KONI-code2023@github
 # date: 2023-10-23
 # ======================
 import matplotlib.pyplot as plt

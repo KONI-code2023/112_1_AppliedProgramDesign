@@ -1,6 +1,6 @@
 # ======================
 # file: Assignment_07.py
-# author: KNE-code2023@github
+# author: KONI-code2023@github
 # date: 2023-12-04
 # ======================
 from PIL import Image, ImageOps

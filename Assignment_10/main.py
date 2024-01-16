@@ -1,6 +1,6 @@
 # ======================
 # file: main.py
-# author: KNE-code2023@github
+# author: KONI-code2023@github
 # date: 2024-01-08
 # ======================
 import os
